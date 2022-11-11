@@ -1,0 +1,10 @@
+datasources:
+  default:
+# See https://github.com/GoogleCloudPlatform/cloud-sql-jdbc-socket-factory/blob/main/docs/jdbc-postgres.md
+# for docs on the structure of this url.
+# The cloudSqlInstance value below will need to be updated
+    url: jdbc:postgresql:///demo?cloudSqlInstance=cloud-run-database:us-central1:gcpdbdemo&socketFactory=com.google.cloud.sql.postgres.SocketFactory
+    username: jeff
+    password: password
+    driverClassName: org.postgresql.Driver
+jpa.default.properties.hibernete.dialect: org.hibernate.dialect.PostgreSQLDialect
